@@ -1,0 +1,22 @@
+name: Flasher Downloader
+
+on:
+  workflow_dispatch:
+    inputs:
+      url:
+        description: 'Link firmware'
+        required: true
+
+jobs:
+  dl:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "Download ${{ inputs.url }} di server Github, bukan di Termux"
+          curl -L -o firmware.img "${{ inputs.url }}"
+          ls -lh
+          echo "SUKSES DOWNLOAD DI GITHUB"
+          # Upload biar bisa diambil termux tanpa download ulang browser
+          gh release create firmware-$(date +%s) firmware.img --notes "auto"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
