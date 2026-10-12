@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:orientation="vertical" android:background="@drawable/bg_dialog_neon" android:padding="16dp">
+    <TextView android:id="@+id/txtProgressTitle" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:text="Progress... Mem-backup partisi boot (23%)" android:textColor="#FF8AFF5A" android:textSize="13sp"/>
+    <ProgressBar android:id="@+id/progBar" style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_marginTop="12dp" android:progress="23" android:max="100"
+        android:progressTint="#FF8AFF5A"/>
+    <TextView android:id="@+id/btnCancel" android:layout_width="match_parent" android:layout_height="48dp"
+        android:text="Batal X" android:textColor="#FF8AFF5A" android:gravity="center"
+        android:background="@drawable/bg_card_blue" android:layout_marginTop="16dp"/>
+</LinearLayout>
