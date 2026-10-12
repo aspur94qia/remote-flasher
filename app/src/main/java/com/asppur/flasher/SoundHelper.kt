@@ -1,17 +1,15 @@
 package com.asppur.flasher
 import android.content.Context
-import android.media.AudioAttributes
-import android.media.SoundPool
+import android.media.AudioManager
+import android.media.ToneGenerator
+
 object SoundHelper {
-    private var pool: SoundPool? = null
-    private var click=0; var ok=0; var cancel=0; var error=0
+    private var tone: ToneGenerator? = null
     fun init(c: Context){
-        if(pool!=null) return
-        pool = SoundPool.Builder().setMaxStreams(4).setAudioAttributes(AudioAttributes.Builder().setUsage(AudioAttributes.USAGE_ASSISTANCE_SONIFICATION).build()).build()
-        // pakai tone bawaan system (fallback) - kita pakai resource id 1 sebagai click
-        click = pool!!.load(c, android.R.raw.notification, 1)
+        try { tone = ToneGenerator(AudioManager.STREAM_MUSIC, 80) } catch(_:Exception){}
     }
-    fun playClick(){ try{ pool?.play(click,1f,1f,1,0,1f) }catch(_:Exception){} }
-    fun playOk(){ try{ pool?.play(click,1f,1f,1,0,1.5f) }catch(_:Exception){} }
-    fun playCancel(){ try{ pool?.play(click,1f,1f,1,0,0.7f) }catch(_:Exception){} }
+    fun playClick(){ try{ tone?.startTone(ToneGenerator.TONE_PROP_BEEP, 120) }catch(_:Exception){} }
+    fun playOk(){ try{ tone?.startTone(ToneGenerator.TONE_PROP_ACK, 200) }catch(_:Exception){} }
+    fun playCancel(){ try{ tone?.startTone(ToneGenerator.TONE_PROP_NACK, 200) }catch(_:Exception){} }
+    fun playError(){ try{ tone?.startTone(ToneGenerator.TONE_CDMA_ABBR_ALERT, 300) }catch(_:Exception){} }
 }
