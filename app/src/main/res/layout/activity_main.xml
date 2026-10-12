@@ -1,31 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent" android:layout_height="match_parent"
-    android:orientation="vertical" android:background="#FF0B0E1A" android:padding="16dp">
-    <TextView android:id="@+id/statusDevice" android:layout_width="match_parent" android:layout_height="wrap_content"
-        android:text="THIS DEVICE IS ROOT MODE" android:textColor="#FF8AFF5A" android:textSize="13sp" android:textStyle="bold"
-        android:gravity="center" android:padding="12dp" android:background="@drawable/bg_card_blue" android:layout_marginBottom="16dp"/>
-    <LinearLayout android:id="@+id/btnThis" android:layout_width="match_parent" android:layout_height="80dp"
-        android:orientation="horizontal" android:gravity="center_vertical" android:background="@drawable/bg_dialog_neon" android:padding="16dp" android:layout_marginBottom="14dp">
-        <TextView android:layout_width="48dp" android:layout_height="48dp" android:text="🛡" android:textSize="28sp" android:gravity="center" android:background="@drawable/bg_btn_dark"/>
-        <LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginStart="14dp">
-            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="THIS DEVICE" android:textColor="#FFFFFFFF" android:textStyle="bold" android:textSize="16sp"/>
-            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Backup &amp; Flash partisi HP ini" android:textColor="#FF8892B0" android:textSize="11sp"/>
+    android:orientation="vertical" android:background="#FF070A14" android:padding="14dp">
+
+    <!-- JUDUL KECIL AJA, GAK GEDE -->
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:text="FLASHER PRO" android:textColor="#FF8AFF5A" android:textSize="11sp" android:letterSpacing="0.15"
+        android:gravity="center" android:padding="6dp" android:layout_marginBottom="10dp"/>
+
+    <!-- CARD THIS DEVICE - 100% PORTRAIT NEON IJO -->
+    <LinearLayout android:id="@+id/btnThis"
+        android:layout_width="match_parent" android:layout_height="96dp"
+        android:orientation="horizontal" android:gravity="center_vertical"
+        android:background="@drawable/bg_dialog_neon" android:padding="16dp" android:layout_marginBottom="14dp">
+        <TextView android:layout_width="56dp" android:layout_height="56dp"
+            android:text="🛡" android:textSize="32sp" android:gravity="center" android:background="@drawable/bg_btn_dark"/>
+        <LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"
+            android:orientation="vertical" android:layout_marginStart="14dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="THIS DEVICE" android:textColor="#FFFFFFFF" android:textStyle="bold" android:textSize="17sp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Backup &amp; Flash partisi HP ini" android:textColor="#FF8AFF5A" android:textSize="12sp" android:layout_marginTop="2dp"/>
+            <TextView android:id="@+id/statusDevice" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="ROOT MODE" android:textColor="#FF8892B0" android:textSize="9sp" android:layout_marginTop="2dp"/>
         </LinearLayout>
-        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="›" android:textColor="#FF8AFF5A" android:textSize="24sp"/>
+        <TextView android:layout_width="24dp" android:layout_height="24dp" android:text="›" android:textColor="#FF8AFF5A" android:textSize="28sp" android:gravity="center"/>
     </LinearLayout>
-    <LinearLayout android:id="@+id/btnOther" android:layout_width="match_parent" android:layout_height="80dp"
-        android:orientation="horizontal" android:gravity="center_vertical" android:background="@drawable/bg_card_orange" android:padding="16dp" android:layout_marginBottom="16dp">
-        <TextView android:layout_width="48dp" android:layout_height="48dp" android:text="🔌" android:textSize="28sp" android:gravity="center" android:background="@drawable/bg_btn_dark"/>
-        <LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginStart="14dp">
-            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="OTHER DEVICE OTG" android:textColor="#FFFFFFFF" android:textStyle="bold" android:textSize="16sp"/>
-            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Flash HP lain via OTG Fastboot" android:textColor="#FF8892B0" android:textSize="11sp"/>
+
+    <!-- CARD OTHER DEVICE OTG - NEON ORANGE -->
+    <LinearLayout android:id="@+id/btnOther"
+        android:layout_width="match_parent" android:layout_height="96dp"
+        android:orientation="horizontal" android:gravity="center_vertical"
+        android:background="@drawable/bg_card_orange" android:padding="16dp" android:layout_marginBottom="16dp">
+        <TextView android:layout_width="56dp" android:layout_height="56dp"
+            android:text="🔌" android:textSize="32sp" android:gravity="center" android:background="@drawable/bg_btn_dark"/>
+        <LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"
+            android:orientation="vertical" android:layout_marginStart="14dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="OTHER DEVICE OTG" android:textColor="#FFFFFFFF" android:textStyle="bold" android:textSize="17sp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Flash HP lain via OTG Fastboot" android:textColor="#FFF59E0B" android:textSize="12sp" android:layout_marginTop="2dp"/>
         </LinearLayout>
-        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="›" android:textColor="#FFF59E0B" android:textSize="24sp"/>
+        <TextView android:layout_width="24dp" android:layout_height="24dp" android:text="›" android:textColor="#FFF59E0B" android:textSize="28sp" android:gravity="center"/>
     </LinearLayout>
-    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="LOG:" android:textColor="#FF8AFF5A" android:textSize="11sp" android:textStyle="bold"/>
-    <ScrollView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:background="#FF13182B" android:layout_marginTop="6dp">
+
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="LOG" android:textColor="#FF8AFF5A" android:textSize="10sp" android:letterSpacing="0.1" android:layout_marginBottom="6dp"/>
+
+    <ScrollView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"
+        android:background="#FF0F1424">
         <TextView android:id="@+id/logView" android:layout_width="match_parent" android:layout_height="wrap_content"
-            android:text="Ready Universal..." android:textColor="#FF00FF88" android:textSize="11sp" android:fontFamily="monospace" android:padding="10dp"/>
+            android:text="[READY] Flasher Pro Universal&#10;[ROOT] Magisk detected" android:textColor="#FF8AFF5A"
+            android:textSize="11sp" android:fontFamily="monospace" android:padding="12dp" android:lineSpacingExtra="2dp"/>
     </ScrollView>
 </LinearLayout>
