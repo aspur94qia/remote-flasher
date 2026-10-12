@@ -1,27 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="wrap_content"
-    android:orientation="vertical" android:background="@drawable/bg_dialog_neon"
-    android:padding="16dp">
-
-    <TextView android:id="@+id/titleDialog"
-        android:layout_width="match_parent" android:layout_height="wrap_content"
-        android:text="PILIH FILE" android:textColor="#FFFFFFFF"
-        android:textSize="16sp" android:textStyle="bold"
-        android:gravity="center" android:paddingBottom="12dp"/>
-
-    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#FF00FF88" android:alpha="0.3"/>
-
-    <ScrollView android:layout_width="match_parent" android:layout_height="wrap_content"
-        android:maxHeight="360dp" android:layout_marginTop="8dp">
-        <LinearLayout android:id="@+id/listContainer"
-            android:layout_width="match_parent" android:layout_height="wrap_content"
-            android:orientation="vertical"/>
-    </ScrollView>
-
-    <TextView android:id="@+id/btnCancel"
-        android:layout_width="match_parent" android:layout_height="48dp"
-        android:text="BATAL" android:textColor="#FFFF4444"
-        android:gravity="center" android:layout_marginTop="12dp"
-        android:background="@drawable/bg_card_orange"/>
+ android:layout_width="match_parent" android:layout_height="wrap_content"
+ android:orientation="vertical" android:background="@drawable/bg_dialog_neon" android:padding="16dp">
+ <TextView android:id="@+id/titleDialog" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="PILIH FILE" android:textColor="#FF8AFF5A" android:textStyle="bold"/>
+ <TextView android:id="@+id/txtPath" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="/storage/emulated/0" android:textColor="#FF8892B0" android:textSize="10sp" android:layout_marginTop="6dp"/>
+ <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginTop="8dp">
+   <TextView android:id="@+id/btnInternal" android:layout_width="0dp" android:layout_weight="1" android:layout_height="36dp" android:text="Internal" android:gravity="center" android:background="@drawable/bg_btn_dark" android:textColor="#FF8AFF5A"/>
+   <TextView android:id="@+id/btnSdCard" android:layout_width="0dp" android:layout_weight="1" android:layout_height="36dp" android:text="SD Card" android:gravity="center" android:background="@drawable/bg_btn_dark" android:textColor="#FFF59E0B" android:layout_marginStart="6dp"/>
+   <TextView android:id="@+id/btnUp" android:layout_width="48dp" android:layout_height="36dp" android:text="⬆️" android:gravity="center" android:background="@drawable/bg_btn_dark" android:layout_marginStart="6dp"/>
+ </LinearLayout>
+ <ScrollView android:layout_width="match_parent" android:layout_height="300dp" android:layout_marginTop="8dp" android:background="#FF0F1424">
+  <LinearLayout android:id="@+id/listContainer" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical"/>
+ </ScrollView>
+ <TextView android:id="@+id/btnCancel" android:layout_width="match_parent" android:layout_height="42dp" android:text="Tutup" android:gravity="center" android:textColor="#FFFFFFFF" android:background="@drawable/bg_card_orange" android:layout_marginTop="10dp"/>
 </LinearLayout>
