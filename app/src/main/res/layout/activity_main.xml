@@ -1,44 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
- android:layout_width="match_parent" android:layout_height="match_parent"
- android:orientation="vertical" android:background="#101115" android:padding="16dp">
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FF0B0E1A"
+    android:padding="16dp">
 
- <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
-  android:text="FLASHER PRO" android:textSize="32sp" android:textStyle="bold"
-  android:textColor="#2EB6FF" android:gravity="center"/>
- <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
-  android:text="Backup dulu baru flash" android:textColor="#8A8FA0"
-  android:gravity="center" android:layout_marginBottom="16dp"/>
+    <TextView android:id="@+id/statusDevice"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:text="Model: ..." android:textColor="#FFFFFFFF" android:textSize="12sp"/>
 
- <TextView android:id="@+id/statusDevice" android:layout_width="match_parent" android:layout_height="wrap_content"
-  android:background="#1E222E" android:padding="12dp" android:textColor="#C9CDDA" android:textSize="12sp" android:text="Loading..."
-  android:layout_marginBottom="20dp"/>
+    <LinearLayout android:id="@+id/btnThis"
+        android:layout_width="match_parent" android:layout_height="80dp"
+        android:background="@drawable/bg_card_blue"
+        android:orientation="horizontal" android:gravity="center_vertical"
+        android:layout_marginTop="16dp" android:padding="12dp">
+        <ImageView android:layout_width="48dp" android:layout_height="48dp"
+            android:src="@drawable/ic_shield_plus"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="THIS DEVICE" android:textColor="#FFFFFFFF"
+            android:textStyle="bold" android:layout_marginStart="12dp"/>
+    </LinearLayout>
 
- <LinearLayout android:id="@+id/btnThis" android:layout_width="match_parent" android:layout_height="wrap_content"
-  android:orientation="horizontal" android:background="@drawable/bg_card_blue" android:padding="16dp" android:layout_marginBottom="12dp" android:gravity="center_vertical">
-  <ImageView android:layout_width="32dp" android:layout_height="32dp" android:src="@drawable/ic_shield_plus"/>
-  <LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginStart="12dp">
-   <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="FLASH TO THIS DEVICE (ROOT)" android:textColor="white" android:textStyle="bold"/>
-   <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Backup Wajib" android:textColor="#2EB6FF" android:textSize="12sp"/>
-  </LinearLayout>
-  <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=">" android:textColor="#2EB6FF" android:textSize="20sp"/>
- </LinearLayout>
+    <LinearLayout android:id="@+id/btnOther"
+        android:layout_width="match_parent" android:layout_height="80dp"
+        android:background="@drawable/bg_card_orange"
+        android:orientation="horizontal" android:gravity="center_vertical"
+        android:layout_marginTop="12dp" android:padding="12dp">
+        <ImageView android:layout_width="48dp" android:layout_height="48dp"
+            android:src="@drawable/ic_usb"/>
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+            android:text="OTHER DEVICE OTG" android:textColor="#FFFFFFFF"
+            android:textStyle="bold" android:layout_marginStart="12dp"/>
+        <ImageView android:layout_width="24dp" android:layout_height="24dp"
+            android:src="@drawable/ic_warning"/>
+    </LinearLayout>
 
- <LinearLayout android:id="@+id/btnOther" android:layout_width="match_parent" android:layout_height="wrap_content"
-  android:orientation="horizontal" android:background="@drawable/bg_card_orange" android:padding="16dp" android:layout_marginBottom="20dp" android:gravity="center_vertical">
-  <ImageView android:layout_width="32dp" android:layout_height="32dp" android:src="@drawable/ic_usb"/>
-  <LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginStart="12dp">
-   <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="FLASH TO OTHER DEVICE (OTG)" android:textColor="white" android:textStyle="bold"/>
-   <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
-    <ImageView android:layout_width="16dp" android:layout_height="16dp" android:src="@drawable/ic_warning"/>
-    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text=" Langsung Flash No Backup" android:textColor="#FFB020" android:textSize="12sp"/>
-   </LinearLayout>
-  </LinearLayout>
-  <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=">" android:textColor="#FFB020" android:textSize="20sp"/>
- </LinearLayout>
-
- <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Log Viewer • LIVE" android:textColor="#00FF88" android:textSize="11sp"/>
- <ScrollView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:background="#161820" android:layout_marginTop="6dp">
-  <TextView android:id="@+id/logView" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="[00:00] Flasher Pro v2.4.1 initialized" android:textColor="#A0A6B8" android:fontFamily="monospace" android:textSize="11sp" android:padding="10dp"/>
- </ScrollView>
+    <ScrollView android:layout_width="match_parent" android:layout_height="0dp"
+        android:layout_weight="1" android:layout_marginTop="16dp">
+        <TextView android:id="@+id/logView"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:textColor="#FF00FF88" android:fontFamily="monospace"
+            android:text="LOG:"/>
+    </ScrollView>
 </LinearLayout>
