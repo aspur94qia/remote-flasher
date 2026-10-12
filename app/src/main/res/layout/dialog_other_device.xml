@@ -3,32 +3,32 @@
  android:layout_width="match_parent" android:layout_height="wrap_content"
  android:orientation="vertical" android:background="@drawable/bg_window_white" android:elevation="8dp">
  <LinearLayout android:layout_width="match_parent" android:layout_height="36dp" android:background="#FFD83B01" android:orientation="horizontal" android:gravity="center_vertical" android:paddingStart="10dp">
-   <TextView android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="🔌 OTHER DEVICE OTG" android:textColor="white" android:textStyle="bold" android:textSize="12sp"/>
-   <TextView android:layout_width="36dp" android:layout_height="36dp" android:text="-" android:gravity="center" android:textColor="white"/>
-   <TextView android:layout_width="36dp" android:layout_height="36dp" android:text="□" android:gravity="center" android:textColor="white"/>
-   <TextView android:id="@+id/btnCloseOther" android:layout_width="36dp" android:layout_height="36dp" android:text="✕" android:gravity="center" android:textColor="white" android:background="#FFE81123"/>
+   <TextView android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="🔌 OTHER DEVICE OTG" android:textColor="#FFFFFF" android:textStyle="bold" android:textSize="12sp"/>
+   <TextView android:layout_width="36dp" android:layout_height="36dp" android:text="-" android:gravity="center" android:textColor="#FFFFFF"/>
+   <TextView android:layout_width="36dp" android:layout_height="36dp" android:text="□" android:gravity="center" android:textColor="#FFFFFF"/>
+   <TextView android:id="@+id/btnCloseOther" android:layout_width="36dp" android:layout_height="36dp" android:text="✕" android:gravity="center" android:textColor="#FFFFFF" android:background="#FFE81123"/>
  </LinearLayout>
  <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="14dp">
    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:background="#FFFFF4CE" android:padding="8dp">
-     <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Status Fastboot:" android:textColor="black" android:textSize="10sp"/>
+     <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Status Fastboot:" android:textColor="#000000" android:textSize="10sp"/>
      <TextView android:id="@+id/txtFastbootConnect" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="● Disconnected" android:textColor="#FFE81123" android:textSize="10sp" android:textStyle="bold" android:layout_marginStart="8dp"/>
-     <TextView android:id="@+id/btnCheckFastboot" android:layout_width="48dp" android:layout_height="24dp" android:text="Cek" android:gravity="center" android:background="#FF0078D4" android:textColor="white" android:textSize="10sp"/>
+     <TextView android:id="@+id/btnCheckFastboot" android:layout_width="48dp" android:layout_height="24dp" android:text="Cek" android:gravity="center" android:background="#FF0078D4" android:textColor="#FFFFFF" android:textSize="10sp"/>
    </LinearLayout>
-   <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="FLASH VIA FASTBOOT OTG" android:textColor="black" android:textStyle="bold" android:textSize="13sp" android:layout_marginTop="12dp"/>
+   <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="FLASH VIA FASTBOOT OTG" android:textColor="#000000" android:textStyle="bold" android:textSize="13sp" android:layout_marginTop="12dp"/>
    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Flash device lain via OTG + fastboot mode" android:textColor="#FF666666" android:textSize="10sp" android:layout_marginTop="2dp"/>
-   <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="File Firmware (img/zip)" android:textColor="black" android:textSize="11sp" android:layout_marginTop="10dp"/>
+   <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="File Firmware (img/zip)" android:textColor="#000000" android:textSize="11sp" android:layout_marginTop="10dp"/>
    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginTop="4dp">
-     <TextView android:id="@+id/btnPilihFileOtg" android:layout_width="0dp" android:layout_weight="1" android:layout_height="32dp" android:text="otg_image.img" android:gravity="center_vertical" android:paddingStart="8dp" android:background="#FFFFFFFF" android:textColor="black" android:textSize="11sp"/>
-     <TextView android:layout_width="72dp" android:layout_height="32dp" android:text="Browse..." android:gravity="center" android:background="#FFE5E5E5" android:textColor="black" android:textSize="11sp" android:layout_marginStart="6dp"/>
+     <TextView android:id="@+id/btnPilihFileOtg" android:layout_width="0dp" android:layout_weight="1" android:layout_height="32dp" android:text="otg_image.img" android:gravity="center_vertical" android:paddingStart="8dp" android:background="#FFFFFFFF" android:textColor="#000000" android:textSize="11sp"/>
+     <TextView android:layout_width="72dp" android:layout_height="32dp" android:text="Browse..." android:gravity="center" android:background="#FFE5E5E5" android:textColor="#000000" android:textSize="11sp" android:layout_marginStart="6dp"/>
    </LinearLayout>
-   <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Partisi target" android:textColor="black" android:textSize="11sp" android:layout_marginTop="8dp"/>
+   <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Partisi target" android:textColor="#000000" android:textSize="11sp" android:layout_marginTop="8dp"/>
    <Spinner android:id="@+id/spinPartisiOtg" android:layout_width="match_parent" android:layout_height="32dp" android:background="#FFFFFFFF" android:layout_marginTop="4dp"/>
-   <TextView android:id="@+id/btnMulaiFlashOtg" android:layout_width="match_parent" android:layout_height="38dp" android:text="Flash OTG" android:gravity="center" android:background="#FFD83B01" android:textColor="white" android:textStyle="bold" android:layout_marginTop="10dp"/>
+   <TextView android:id="@+id/btnMulaiFlashOtg" android:layout_width="match_parent" android:layout_height="38dp" android:text="Flash OTG" android:gravity="center" android:background="#FFD83B01" android:textColor="#FFFFFF" android:textStyle="bold" android:layout_marginTop="10dp"/>
    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginTop="10dp">
-     <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Proses:" android:textColor="black" android:textSize="10sp"/>
+     <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Proses:" android:textColor="#000000" android:textSize="10sp"/>
      <ProgressBar android:id="@+id/progBarOtg" style="?android:attr/progressBarStyleHorizontal" android:layout_width="0dp" android:layout_weight="1" android:layout_height="12dp" android:max="100" android:progress="0" android:layout_marginStart="8dp"/>
-     <TextView android:id="@+id/txtPercentOtg" android:layout_width="36dp" android:layout_height="wrap_content" android:text="0%" android:textColor="black" android:textSize="10sp" android:gravity="center"/>
-     <TextView android:id="@+id/btnCancelOtg" android:layout_width="44dp" android:layout_height="24dp" android:text="Batal" android:gravity="center" android:background="#FFE5E5E5" android:textColor="black" android:textSize="9sp" android:layout_marginStart="6dp"/>
+     <TextView android:id="@+id/txtPercentOtg" android:layout_width="36dp" android:layout_height="wrap_content" android:text="0%" android:textColor="#000000" android:textSize="10sp" android:gravity="center"/>
+     <TextView android:id="@+id/btnCancelOtg" android:layout_width="44dp" android:layout_height="24dp" android:text="Batal" android:gravity="center" android:background="#FFE5E5E5" android:textColor="#000000" android:textSize="9sp" android:layout_marginStart="6dp"/>
    </LinearLayout>
    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="⚠ Device lain harus dalam mode fastboot + OTG terhubung" android:textColor="#FFD83B01" android:textSize="9sp" android:layout_marginTop="8dp"/>
  </LinearLayout>
