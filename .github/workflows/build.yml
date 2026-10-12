@@ -9,14 +9,16 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: '17'
-      - uses: gradle/actions/setup-gradle@v3
+      - name: Setup Gradle 8.4
+        uses: gradle/actions/setup-gradle@v3
         with:
           gradle-version: 8.4
           cache-disabled: true
-      - name: Build Debug
+      - name: Force use Gradle 8.4 not wrapper
         run: |
-          chmod +x gradlew
-          ./gradlew assembleDebug --no-daemon
+          echo "distributionUrl=https://services.gradle.org/distributions/gradle-8.4-bin.zip" > gradle/wrapper/gradle-wrapper.properties
+          gradle --version
+          gradle assembleDebug --no-daemon --warning-mode none
       - uses: actions/upload-artifact@v4
         with:
           name: FlasherPro-APK
