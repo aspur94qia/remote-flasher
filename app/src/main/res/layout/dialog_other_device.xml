@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:orientation="vertical" android:background="@drawable/bg_dialog_neon" android:padding="18dp">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical">
+        <TextView android:layout_width="32dp" android:layout_height="32dp" android:text="🔌" android:gravity="center"/>
+        <TextView android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"
+            android:text="OTHER DEVICE OTG" android:textColor="#FFF59E0B" android:textStyle="bold" android:textSize="16sp" android:gravity="center"/>
+        <TextView android:id="@+id/btnCloseOther" android:layout_width="32dp" android:layout_height="32dp"
+            android:text="✕" android:textColor="#FFF59E0B" android:textSize="18sp" android:gravity="center" android:background="@drawable/bg_card_orange"/>
+    </LinearLayout>
+    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#FFF59E0B" android:alpha="0.3" android:layout_marginTop="12dp"/>
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="⚡ FLASH VIA FASTBOOT OTG" android:textColor="#FFF59E0B" android:textStyle="bold" android:textSize="14sp" android:layout_marginTop="16dp"/>
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Pilih file .img untuk di-flash ke device lain via OTG" android:textColor="#FF8892B0" android:textSize="11sp"/>
+    <TextView android:id="@+id/btnPilihFileOtg" android:layout_width="match_parent" android:layout_height="48dp"
+        android:text="📁  Pilih file OTG..." android:textColor="#FFFFFFFF"
+        android:gravity="center_vertical" android:paddingStart="12dp"
+        android:background="@drawable/bg_card_orange" android:layout_marginTop="12dp"/>
+    <Spinner android:id="@+id/spinPartisiOtg" android:layout_width="match_parent" android:layout_height="48dp" android:background="@drawable/bg_card_orange" android:layout_marginTop="10dp"/>
+    <TextView android:id="@+id/btnMulaiFlashOtg" android:layout_width="match_parent" android:layout_height="48dp"
+        android:text="Flash OTG" android:textColor="#FF000000" android:textStyle="bold"
+        android:gravity="center" android:background="#FFF59E0B" android:layout_marginTop="12dp"/>
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:text="Butuh kabel OTG + device masuk fastboot mode" android:textColor="#FF666666" android:textSize="10sp" android:gravity="center" android:layout_marginTop="8dp"/>
+</LinearLayout>

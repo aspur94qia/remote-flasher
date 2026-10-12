@@ -1,40 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="wrap_content">
-<LinearLayout
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent" android:layout_height="wrap_content"
-    android:orientation="vertical" android:background="@drawable/bg_dialog_neon"
-    android:padding="16dp">
-    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-        android:orientation="horizontal" android:gravity="center_vertical">
+    android:orientation="vertical" android:background="@drawable/bg_dialog_neon" android:padding="18dp">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical">
+        <TextView android:layout_width="32dp" android:layout_height="32dp" android:text="🤖" android:gravity="center"/>
         <TextView android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"
             android:text="THIS DEVICE" android:textColor="#FF8AFF5A" android:textStyle="bold" android:textSize="18sp" android:gravity="center"/>
         <TextView android:id="@+id/btnClose" android:layout_width="32dp" android:layout_height="32dp"
-            android:text="X" android:textColor="#FF8AFF5A" android:textSize="20sp" android:gravity="center"/>
+            android:text="✕" android:textColor="#FF8AFF5A" android:textSize="18sp" android:gravity="center" android:background="@drawable/bg_btn_dark"/>
     </LinearLayout>
-    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#FF8AFF5A" android:layout_marginTop="8dp" android:alpha="0.5"/>
-    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-        android:text="🛡 BACKUP" android:textColor="#FF8AFF5A" android:textStyle="bold" android:textSize="16sp" android:layout_marginTop="16dp"/>
-    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-        android:text="Pilih partisi (auto-detect dari HP)" android:textColor="#FF8892B0" android:textSize="12sp"/>
-    <LinearLayout android:id="@+id/containerPartisi" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginTop="8dp"/>
+
+    <TextView android:layout_width="match_parent" android:layout_height="1dp" android:background="#FF8AFF5A" android:alpha="0.3" android:layout_marginTop="12dp"/>
+
+    <!-- BACKUP SECTION -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginTop="16dp" android:gravity="center_vertical">
+        <TextView android:layout_width="24dp" android:layout_height="24dp" android:text="🛡" android:gravity="center" android:background="@drawable/bg_btn_dark"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=" BACKUP" android:textColor="#FF8AFF5A" android:textStyle="bold" android:textSize="16sp" android:layout_marginStart="6dp"/>
+    </LinearLayout>
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Pilih partisi yang ingin dibackup (auto-detect HP)" android:textColor="#FF8892B0" android:textSize="11sp" android:layout_marginTop="2dp"/>
+
+    <LinearLayout android:id="@+id/containerPartisi" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginTop="10dp"/>
+
     <TextView android:id="@+id/btnMulaiBackup" android:layout_width="match_parent" android:layout_height="48dp"
-        android:text="Mulai backup" android:textColor="#FF000000" android:textStyle="bold"
-        android:gravity="center" android:background="#FF8AFF5A" android:layout_marginTop="8dp"/>
-    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#FF8AFF5A" android:layout_marginTop="16dp" android:alpha="0.5"/>
-    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-        android:text="⚡ FLASH" android:textColor="#FF8AFF5A" android:textStyle="bold" android:textSize="16sp" android:layout_marginTop="16dp"/>
-    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-        android:text="Pilih file &amp; partisi tujuan (auto)" android:textColor="#FF8892B0" android:textSize="12sp"/>
+        android:text="Mulai backup" android:textColor="#FF000000" android:textStyle="bold" android:textSize="14sp"
+        android:gravity="center" android:background="@drawable/bg_btn_green" android:layout_marginTop="12dp"/>
+
+    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#FF8AFF5A" android:alpha="0.3" android:layout_marginTop="18dp"/>
+
+    <!-- FLASH SECTION -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginTop="16dp" android:gravity="center_vertical">
+        <TextView android:layout_width="24dp" android:layout_height="24dp" android:text="⚡" android:gravity="center" android:background="@drawable/bg_btn_dark"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=" FLASH" android:textColor="#FF8AFF5A" android:textStyle="bold" android:textSize="16sp" android:layout_marginStart="6dp"/>
+    </LinearLayout>
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Pilih file &amp; partisi tujuan" android:textColor="#FF8892B0" android:textSize="11sp" android:layout_marginTop="2dp"/>
+
     <TextView android:id="@+id/btnPilihFile" android:layout_width="match_parent" android:layout_height="48dp"
-        android:text="📁 Pilih file..." android:textColor="#FFFFFFFF" android:gravity="center_vertical"
-        android:paddingStart="12dp" android:background="@drawable/bg_card_blue" android:layout_marginTop="8dp"/>
-    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-        android:text="Partisi (terdeteksi otomatis):" android:textColor="#FF8892B0" android:textSize="12sp" android:layout_marginTop="8dp"/>
-    <Spinner android:id="@+id/spinPartisi" android:layout_width="match_parent" android:layout_height="48dp"
-        android:background="@drawable/bg_card_blue"/>
+        android:text="📁  Pilih file...  backup.img" android:textColor="#FFFFFFFF" android:textSize="13sp"
+        android:gravity="center_vertical" android:paddingStart="12dp"
+        android:background="@drawable/bg_card_blue" android:layout_marginTop="10dp"/>
+
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Partisi:" android:textColor="#FF8892B0" android:textSize="11sp" android:layout_marginTop="10dp"/>
+
+    <Spinner android:id="@+id/spinPartisi" android:layout_width="match_parent" android:layout_height="48dp" android:background="@drawable/bg_card_blue"/>
+
     <TextView android:id="@+id/btnMulaiFlash" android:layout_width="match_parent" android:layout_height="48dp"
-        android:text="Mulai flash" android:textColor="#FF000000" android:textStyle="bold"
-        android:gravity="center" android:background="#FF8AFF5A" android:layout_marginTop="8dp"/>
+        android:text="Mulai flash" android:textColor="#FF000000" android:textStyle="bold" android:textSize="14sp"
+        android:gravity="center" android:background="@drawable/bg_btn_green" android:layout_marginTop="12dp"/>
 </LinearLayout>
-</ScrollView>
