@@ -27,9 +27,9 @@
         <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical" android:layout_marginTop="4dp">
             <ProgressBar android:id="@+id/progBarOtg" style="?android:attr/progressBarStyleHorizontal"
                 android:layout_width="0dp" android:layout_weight="1" android:layout_height="8dp"
-                android:progress="23" android:progressTint="#FFF59E0B"/>
+                android:progress="0" android:progressTint="#FFF59E0B"/>
             <TextView android:id="@+id/txtPercentOtg" android:layout_width="wrap_content" android:layout_height="wrap_content"
-                android:text="23%" android:textColor="#FFF59E0B" android:textSize="12sp" android:layout_marginStart="8dp"/>
+                android:text="Ready" android:textColor="#FFF59E0B" android:textSize="12sp" android:layout_marginStart="8dp"/>
             <TextView android:id="@+id/btnCancelOtg" android:layout_width="wrap_content" android:layout_height="28dp"
                 android:text="✕ Batal" android:textColor="#FFF59E0B" android:textSize="12sp" android:gravity="center"
                 android:paddingStart="10dp" android:paddingEnd="10dp" android:background="@drawable/bg_card_orange" android:layout_marginStart="8dp"/>
