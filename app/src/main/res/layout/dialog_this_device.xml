@@ -1,32 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
  android:layout_width="match_parent" android:layout_height="wrap_content"
- android:orientation="vertical" android:background="#FFFFFFFF">
- <LinearLayout android:layout_width="match_parent" android:layout_height="36dp" android:background="#FF0078D4" android:orientation="horizontal" android:gravity="center_vertical" android:paddingStart="10dp">
-   <TextView android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="THIS DEVICE" android:textColor="#FFFFFFFF" android:textStyle="bold" android:textSize="12sp"/>
-   <TextView android:layout_width="36dp" android:layout_height="36dp" android:text="-" android:gravity="center" android:textColor="#FFFFFFFF"/>
-   <TextView android:layout_width="36dp" android:layout_height="36dp" android:text="□" android:gravity="center" android:textColor="#FFFFFFFF"/>
-   <TextView android:id="@+id/btnClose" android:layout_width="36dp" android:layout_height="36dp" android:text="X" android:gravity="center" android:textColor="#FFFFFFFF" android:background="#FFE81123"/>
+ android:orientation="vertical" android:background="@drawable/bg_dialog_green" android:padding="14dp">
+ <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+   <TextView android:layout_width="24dp" android:layout_height="24dp" android:text="🤖" android:gravity="center" android:background="#FF0F2A1A" android:textSize="12sp"/>
+   <TextView android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="THIS DEVICE" android:textColor="#FF00FF88" android:textStyle="bold" android:textSize="14sp" android:fontFamily="monospace" android:layout_marginStart="8dp"/>
+   <TextView android:layout_width="26dp" android:layout_height="26dp" android:text="-" android:gravity="center" android:background="#FF1A2332" android:textColor="#FF8892B0" android:layout_marginEnd="4dp"/>
+   <TextView android:layout_width="26dp" android:layout_height="26dp" android:text="□" android:gravity="center" android:background="#FF1A2332" android:textColor="#FF8892B0" android:layout_marginEnd="4dp"/>
+   <TextView android:id="@+id/btnClose" android:layout_width="26dp" android:layout_height="26dp" android:text="X" android:gravity="center" android:background="#FF2A1A1A" android:textColor="#FFFFFFFF"/>
  </LinearLayout>
- <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="14dp">
-   <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="BACKUP" android:textColor="#FF000000" android:textStyle="bold" android:textSize="13sp"/>
-   <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Pilih partisi yang akan di-backup" android:textColor="#FF666666" android:textSize="10sp"/>
-   <LinearLayout android:id="@+id/containerPartisi" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginTop="8dp" android:background="#FFF5F5F5" android:padding="8dp"/>
-   <TextView android:id="@+id/btnMulaiBackup" android:layout_width="match_parent" android:layout_height="38dp" android:text="Mulai backup" android:gravity="center" android:background="#FF0078D4" android:textColor="#FFFFFFFF" android:textStyle="bold" android:layout_marginTop="10dp"/>
-   <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#FFDDDDDD" android:layout_marginTop="12dp" android:layout_marginBottom="12dp"/>
-   <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="FLASH" android:textColor="#FF000000" android:textStyle="bold" android:textSize="13sp"/>
-   <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Pilih file firmware" android:textColor="#FF000000" android:textSize="11sp" android:layout_marginTop="8dp"/>
-   <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginTop="4dp">
-     <TextView android:id="@+id/btnPilihFile" android:layout_width="0dp" android:layout_weight="1" android:layout_height="32dp" android:text="Pilih file... (.img, .zip)" android:gravity="center_vertical" android:paddingStart="8dp" android:background="#FFE5E5E5" android:textColor="#FF666666" android:textSize="11sp"/>
-     <TextView android:layout_width="72dp" android:layout_height="32dp" android:text="Browse..." android:gravity="center" android:background="#FFCCCCCC" android:textColor="#FF000000" android:textSize="11sp" android:layout_marginStart="6dp"/>
-   </LinearLayout>
-   <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Partisi target" android:textColor="#FF000000" android:textSize="11sp" android:layout_marginTop="8dp"/>
-   <Spinner android:id="@+id/spinPartisi" android:layout_width="match_parent" android:layout_height="32dp" android:background="#FFE5E5E5" android:layout_marginTop="4dp"/>
-   <TextView android:id="@+id/btnMulaiFlash" android:layout_width="match_parent" android:layout_height="38dp" android:text="Mulai flash" android:gravity="center" android:background="#FF0078D4" android:textColor="#FFFFFFFF" android:textStyle="bold" android:layout_marginTop="10dp"/>
-   <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginTop="10dp">
-     <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Proses:" android:textColor="#FF000000" android:textSize="10sp"/>
-     <ProgressBar android:id="@+id/progBarThis" style="?android:attr/progressBarStyleHorizontal" android:layout_width="0dp" android:layout_weight="1" android:layout_height="12dp" android:max="100" android:progress="0" android:layout_marginStart="8dp"/>
-     <TextView android:id="@+id/txtPercentThis" android:layout_width="36dp" android:layout_height="wrap_content" android:text="0%" android:textColor="#FF000000" android:textSize="10sp" android:gravity="center"/>
-   </LinearLayout>
+ <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginTop="14dp">
+   <TextView android:layout_width="22dp" android:layout_height="22dp" android:text="📥" android:gravity="center" android:background="#FF00FF88" android:textColor="#FF000000" android:textSize="11sp"/>
+   <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="BACKUP" android:textColor="#FFFFFFFF" android:textStyle="bold" android:textSize="13sp" android:fontFamily="monospace" android:layout_marginStart="8dp"/>
+ </LinearLayout>
+ <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Pilih partisi yang akan di-backup (auto-detect dari device ini)" android:textColor="#FF8892B0" android:textSize="10sp" android:layout_marginTop="2dp"/>
+ <LinearLayout android:id="@+id/containerPartisi" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginTop="10dp" android:background="#FF0F1424" android:padding="8dp"/>
+ <TextView android:id="@+id/btnMulaiBackup" android:layout_width="match_parent" android:layout_height="44dp" android:text="🛡 Mulai backup" android:gravity="center" android:background="#FF22C55E" android:textColor="#FFFFFFFF" android:textStyle="bold" android:fontFamily="monospace" android:layout_marginTop="12dp"/>
+ <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#FF1E293B" android:layout_marginTop="14dp" android:layout_marginBottom="14dp"/>
+ <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+   <TextView android:layout_width="22dp" android:layout_height="22dp" android:text="⚡" android:gravity="center" android:background="#FFF59E0B" android:textColor="#FF000000" android:textSize="11sp"/>
+   <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="FLASH" android:textColor="#FFFFFFFF" android:textStyle="bold" android:textSize="13sp" android:fontFamily="monospace" android:layout_marginStart="8dp"/>
+ </LinearLayout>
+ <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Pilih file firmware" android:textColor="#FFCCCCCC" android:textSize="11sp" android:layout_marginTop="10dp" android:fontFamily="monospace"/>
+ <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginTop="4dp">
+   <TextView android:id="@+id/btnPilihFile" android:layout_width="0dp" android:layout_weight="1" android:layout_height="38dp" android:text="Pilih file... (.img,.zip)" android:gravity="center_vertical" android:paddingStart="12dp" android:background="#FF0B0F1E" android:textColor="#FF8892B0" android:textSize="11sp" android:fontFamily="monospace"/>
+   <TextView android:layout_width="72dp" android:layout_height="38dp" android:text="Browse..." android:gravity="center" android:background="#FF1E293B" android:textColor="#FFFFFFFF" android:textSize="11sp" android:layout_marginStart="6dp" android:fontFamily="monospace"/>
+ </LinearLayout>
+ <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Partisi target" android:textColor="#FFCCCCCC" android:textSize="11sp" android:layout_marginTop="10dp" android:fontFamily="monospace"/>
+ <Spinner android:id="@+id/spinPartisi" android:layout_width="match_parent" android:layout_height="38dp" android:background="#FF0B0F1E" android:layout_marginTop="4dp"/>
+ <TextView android:id="@+id/btnMulaiFlash" android:layout_width="match_parent" android:layout_height="44dp" android:text="⚡ Mulai flash" android:gravity="center" android:background="#FF16A34A" android:textColor="#FFFFFFFF" android:textStyle="bold" android:fontFamily="monospace" android:layout_marginTop="12dp"/>
+ <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginTop="12dp">
+   <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Proses:" android:textColor="#FF8892B0" android:textSize="10sp" android:fontFamily="monospace"/>
+   <ProgressBar android:id="@+id/progBarThis" style="?android:attr/progressBarStyleHorizontal" android:layout_width="0dp" android:layout_weight="1" android:layout_height="8dp" android:max="100" android:progress="0" android:layout_marginStart="8dp"/>
+   <TextView android:id="@+id/txtPercentThis" android:layout_width="38dp" android:layout_height="wrap_content" android:text="0%" android:textColor="#FFFFFFFF" android:textSize="10sp" android:fontFamily="monospace" android:gravity="center"/>
  </LinearLayout>
 </LinearLayout>
