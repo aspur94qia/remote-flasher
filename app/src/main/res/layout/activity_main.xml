@@ -1,1 +1,49 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent"/>
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+ android:layout_width="match_parent" android:layout_height="match_parent"
+ android:orientation="vertical" android:background="#101115" android:padding="16dp">
+
+ <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+  android:text="FLASHER PRO" android:textSize="32sp" android:textStyle="bold"
+  android:textColor="#2EB6FF" android:gravity="center" android:letterSpacing="0.1"/>
+ <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+  android:text="Backup dulu baru flash" android:textColor="#8A8FA0"
+  android:gravity="center" android:layout_marginBottom="16dp"/>
+
+ <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+  android:orientation="horizontal" android:background="#1E222E"
+  android:padding="12dp" android:layout_marginBottom="20dp">
+  <TextView android:id="@+id/statusDevice" android:layout_width="match_parent" android:layout_height="wrap_content"
+   android:text="Perangkat: Deteksi...\nRoot: Checking..." android:textColor="#C9CDDA" android:textSize="12sp"/>
+ </LinearLayout>
+
+ <LinearLayout android:id="@+id/btnThis" android:layout_width="match_parent" android:layout_height="wrap_content"
+  android:orientation="vertical" android:background="#1A2A40" android:padding="16dp"
+  android:layout_marginBottom="12dp">
+  <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+   <TextView android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"
+    android:text="FLASH TO THIS DEVICE (ROOT)" android:textColor="white" android:textSize="16sp" android:textStyle="bold"/>
+   <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="LIVE" android:textColor="#00FF88" android:textSize="10sp" android:background="#203A2A" android:padding="4dp"/>
+  </LinearLayout>
+  <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Backup Wajib" android:textColor="#2EB6FF" android:textSize="12sp" android:layout_marginTop="8dp"/>
+ </LinearLayout>
+
+ <LinearLayout android:id="@+id/btnOther" android:layout_width="match_parent" android:layout_height="wrap_content"
+  android:orientation="vertical" android:background="#3A2A15" android:padding="16dp"
+  android:layout_marginBottom="20dp">
+  <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+   android:text="FLASH TO OTHER DEVICE (OTG)" android:textColor="white" android:textSize="16sp" android:textStyle="bold"/>
+  <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Langsung Flash No Backup" android:textColor="#FFB020" android:textSize="12sp" android:layout_marginTop="8dp"/>
+ </LinearLayout>
+
+ <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Log Viewer" android:textColor="#8A8FA0" android:textSize="12sp"/>
+ <ScrollView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:background="#161820" android:layout_marginTop="6dp">
+  <TextView android:id="@+id/logView" android:layout_width="match_parent" android:layout_height="wrap_content"
+   android:text="[00:00] Ready..." android:textColor="#A0A6B8" android:fontFamily="monospace" android:textSize="11sp" android:padding="10dp"/>
+ </ScrollView>
+
+ <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginTop="12dp">
+  <Button android:id="@+id/btnClear" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="Clear Log"/>
+  <Button android:id="@+id/btnReboot" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="Reboot"/>
+ </LinearLayout>
+</LinearLayout>
