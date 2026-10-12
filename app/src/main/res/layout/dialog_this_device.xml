@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content">
+<LinearLayout
     android:layout_width="match_parent" android:layout_height="wrap_content"
     android:orientation="vertical" android:background="@drawable/bg_dialog_neon"
     android:padding="16dp">
-
     <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
         android:orientation="horizontal" android:gravity="center_vertical">
         <TextView android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"
@@ -11,44 +12,29 @@
         <TextView android:id="@+id/btnClose" android:layout_width="32dp" android:layout_height="32dp"
             android:text="X" android:textColor="#FF8AFF5A" android:textSize="20sp" android:gravity="center"/>
     </LinearLayout>
-
     <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#FF8AFF5A" android:layout_marginTop="8dp" android:alpha="0.5"/>
-
-    <!-- BACKUP -->
     <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
         android:text="🛡 BACKUP" android:textColor="#FF8AFF5A" android:textStyle="bold" android:textSize="16sp" android:layout_marginTop="16dp"/>
     <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-        android:text="Pilih partisi yang ingin dibackup" android:textColor="#FF8892B0" android:textSize="12sp"/>
-
-    <CheckBox android:id="@+id/cb_boot" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="boot" android:textColor="#FFF" android:buttonTint="#FF8AFF5A" android:checked="true"/>
-    <CheckBox android:id="@+id/cb_recovery" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="recovery" android:textColor="#FFF" android:buttonTint="#FF8AFF5A" android:checked="true"/>
-    <CheckBox android:id="@+id/cb_vbmeta" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="vbmeta" android:textColor="#FFF" android:buttonTint="#FF8AFF5A" android:checked="true"/>
-    <CheckBox android:id="@+id/cb_dtbo" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="dtbo" android:textColor="#FFF" android:buttonTint="#FF8AFF5A"/>
-    <CheckBox android:id="@+id/cb_super" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="super" android:textColor="#FFF" android:buttonTint="#FF8AFF5A" android:checked="true"/>
-
+        android:text="Pilih partisi (auto-detect dari HP)" android:textColor="#FF8892B0" android:textSize="12sp"/>
+    <LinearLayout android:id="@+id/containerPartisi" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginTop="8dp"/>
     <TextView android:id="@+id/btnMulaiBackup" android:layout_width="match_parent" android:layout_height="48dp"
         android:text="Mulai backup" android:textColor="#FF000000" android:textStyle="bold"
         android:gravity="center" android:background="#FF8AFF5A" android:layout_marginTop="8dp"/>
-
     <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#FF8AFF5A" android:layout_marginTop="16dp" android:alpha="0.5"/>
-
-    <!-- FLASH -->
     <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
         android:text="⚡ FLASH" android:textColor="#FF8AFF5A" android:textStyle="bold" android:textSize="16sp" android:layout_marginTop="16dp"/>
     <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-        android:text="Pilih file &amp; partisi tujuan" android:textColor="#FF8892B0" android:textSize="12sp"/>
-
+        android:text="Pilih file &amp; partisi tujuan (auto)" android:textColor="#FF8892B0" android:textSize="12sp"/>
     <TextView android:id="@+id/btnPilihFile" android:layout_width="match_parent" android:layout_height="48dp"
         android:text="📁 Pilih file..." android:textColor="#FFFFFFFF" android:gravity="center_vertical"
         android:paddingStart="12dp" android:background="@drawable/bg_card_blue" android:layout_marginTop="8dp"/>
-
     <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-        android:text="Partisi:" android:textColor="#FF8892B0" android:textSize="12sp" android:layout_marginTop="8dp"/>
-
+        android:text="Partisi (terdeteksi otomatis):" android:textColor="#FF8892B0" android:textSize="12sp" android:layout_marginTop="8dp"/>
     <Spinner android:id="@+id/spinPartisi" android:layout_width="match_parent" android:layout_height="48dp"
         android:background="@drawable/bg_card_blue"/>
-
     <TextView android:id="@+id/btnMulaiFlash" android:layout_width="match_parent" android:layout_height="48dp"
         android:text="Mulai flash" android:textColor="#FF000000" android:textStyle="bold"
         android:gravity="center" android:background="#FF8AFF5A" android:layout_marginTop="8dp"/>
 </LinearLayout>
+</ScrollView>
