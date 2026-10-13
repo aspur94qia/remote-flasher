@@ -6,9 +6,9 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val tv = TextView(this)
-        tv.text = "FLASHER NEON OK - ANTI CRASH\nJika ini muncul, app sudah gak crash"
-        tv.textSize = 20f
-        tv.setPadding(40,100,40,40)
+        tv.text = "FLASHER OK BOS - GAK CRASH LAGI"
+        tv.textSize = 24f
+        tv.setPadding(50,200,50,50)
         setContentView(tv)
     }
 }
